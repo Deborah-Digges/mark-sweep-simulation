@@ -3,6 +3,7 @@
 
 #include <deque>
 #include <queue>
+#include <stack>
 
 /* An object allocated can be either an integer(atom) or a pair */
 typedef enum

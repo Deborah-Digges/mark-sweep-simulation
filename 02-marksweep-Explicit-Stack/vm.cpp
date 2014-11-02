@@ -189,7 +189,6 @@ void VM::mark(std::stack<Object*>& markStack)
 
 		}
 	}
-		
 }
 
 

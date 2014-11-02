@@ -17,10 +17,14 @@ The *reachable* objects are those which, starting from those on the stack, can b
 ##GC Invocation
 
 The GC is invoked in one of two situations:
-<ol>
-<li> The number of objects allocated has reached the threshold for GC invocation.</li>
-<li> The heap is exhausted which causes the GC to be invoked in an attempt to free memory for a new allocation.</li>
-</ol>
+1. The number of objects allocated has reached the threshold for GC invocation.
+2. The heap is exhausted which causes the GC to be invoked in an attempt to free memory for a new allocation.
+
+
+## Directory Structure
+* 01 - Mark phase is made recursive and uses the [implicit stack of recursion for finding reachable objects](http://github.com/01-marksweep-simple/vm.cpp/#L151-174)
+* 02 - Mark phase uses an [explicit stack for finding reachable object](http://github.com/deborah-digges/mark-sweep-simulation/02-marksweep-Explicit-Stack/vm.cpp/#L151-192)
+
 
 ##Build & Run
 
