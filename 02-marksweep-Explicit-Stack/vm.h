@@ -103,7 +103,7 @@ class VM
 
 		/* --- GC ROUTINES --- */
 
-		void mark(Object* object);
+		void mark(std::stack<Object*>& markStack);
 
 		void markAll();
 

@@ -193,13 +193,13 @@ void VM::sweep()
 
 			numObjects--;
 		}
-	    else
-	    {
-	      /* This object was reached, so unmark it (for the next GC) and move on to
+		else
+		{
+			/* This object was reached, so unmark it (for the next GC) and move on to
 	       the next. */
 			(*object)->marked = 0;
 			object = &(*object)->next;
-	    }
+		}
 	}
 }
 

@@ -150,27 +150,46 @@ void VM::checkAllocationThreshold()
 
 void VM::markAll()
 {
+	std::stack<Object*> markStack;
 	for (int i = 0; i < stack.size(); ++i)
 	{
-		mark(stack.at(i));		
+		Object* root = stack.at(i);
+		root->marked = 1;
+		if(root->type == OBJ_PAIR)
+		{
+			markStack.push(root);
+			mark(markStack);	
+		}
+				
 	}
 }
 
 
-void VM::mark(Object* object)
+void VM::mark(std::stack<Object*>& markStack)
 {
-	if(object -> marked)
+	Object* popped = NULL;
+
+	while(!markStack.empty())
 	{
-		return;
+		popped = markStack.top();
+		markStack.pop();
+		Object* children[] = {popped->left, popped->right};
+		Object* child = NULL;
+		for(int i=0; i < 2; ++i)
+		{
+			child = children[i];
+			if(!child->marked)
+			{	
+				child->marked = 1;
+				if(child->type == OBJ_PAIR)
+				{		
+					markStack.push(child);
+				}
+			}
+
+		}
 	}
-
-	object->marked = 1;
-
-	if(object->type == OBJ_PAIR)
-	{
-		mark(object->left);
-		mark(object->right);
-	}	
+		
 }
 
 
