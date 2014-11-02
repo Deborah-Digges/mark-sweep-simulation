@@ -22,7 +22,7 @@ The GC is invoked in one of two situations:
 
 
 ## Directory Structure
-* 01 - Mark phase is made recursive and uses the [implicit stack of recursion for finding reachable objects](http://github.com/01-marksweep-simple/vm.cpp/#L151-174)
+* 01 - Mark phase is made recursive and uses the [implicit stack of recursion for finding reachable objects](http://github.com/deborah-digges/01-marksweep-simple/vm.cpp/#L151-174)
 * 02 - Mark phase uses an [explicit stack for finding reachable object](http://github.com/deborah-digges/mark-sweep-simulation/02-marksweep-Explicit-Stack/vm.cpp/#L151-192)
 
 
