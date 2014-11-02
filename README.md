@@ -1,4 +1,4 @@
-## Mark Sweep Garbage Collector
+## Simulation of A Mark Sweep Garbage Collector
 
 A high level implementation of a mark-sweep garbage collector.
 
