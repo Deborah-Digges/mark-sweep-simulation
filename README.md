@@ -12,11 +12,12 @@ The parameters of the VM that can be configured are:
 These parameters can be configured via the VM's constructor *VM(threshold, heapSize)*.
 The VM supports interfaces to push and pop objects from the stack. 
 
-The *reachable* objects are those which, starting from those on the stack, can be traced by following references. All unreachable objects are deemed *garbage* and are collected by the GC upon it's next invocation. Once an object is popped from the VM's stack it is unreachable and becomes garabge.
+The *reachable* objects are those which, starting from those on the stack, can be traced by following references. All unreachable objects are deemed *garbage* and are collected by the GC upon it's next invocation. Once an object is popped from the VM's stack it is unreachable and becomes garbage.
 
 ##GC Invocation
 
 The GC is invoked in one of two situations:
+&nbsp;
 1. The number of objects allocated has reached the threshold for GC invocation.
 2. The heap is exhausted which causes the GC to be invoked in an attempt to free memory for a new allocation.
 
