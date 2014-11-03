@@ -42,7 +42,8 @@ public class MemoryTest {
           		/* Generate some garbage */
 			for (int j = 0; j < 100; j++)
 			{
-				strings.set((int)Math.floor(Math.random() * strings.size()), "randomString:" + Math.random() + buffer);
+				strings.set((int)Math.floor(Math.random() * strings.size()),
+								"randomString:" + Math.random() + buffer);
 			}
 	 
 			/* Print the memory usage every now and then */
