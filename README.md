@@ -26,6 +26,7 @@ The GC is invoked in one of two situations:
 * 01 - Mark phase is made recursive and uses the [implicit stack of recursion for finding reachable objects](http://github.com/Deborah-Digges/mark-sweep-simulation/blob/master/01-marksweep-simple/vm.cpp/#L151-174)
 * 02 - Mark phase uses an [explicit stack for finding reachable objects](http://github.com/Deborah-Digges/mark-sweep-simulation/blob/master/02-marksweep-Explicit-Stack/vm.cpp/#L151-192)
 * 03 - Mark phase uses the Deutsch-Schorr-Waite Pointer Reversal algorithm which [traverses the data structure without using an unbounded amount of linear space](http://github.com/Deborah-Digges/mark-sweep-simulation/blob/master/03-marksweep-Pointer-Reversal/vm.cpp/#L152-205). This is possible because the algorithm keeps track of paths it has already visited within the nodes of the data structure it is traversing! Essentially, we are traversing the data structure using the data strure itself.
+* 04 - Demonstration of how GC can affect the performance of a program.
 
 
 ##Build & Run
