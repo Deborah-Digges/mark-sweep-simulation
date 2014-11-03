@@ -5,5 +5,5 @@ This is a simple demonstration to show the impact of GC on program performance. 
 ## Build & run
 make clean<br/>
 make <br/>
-make run<br/
+make run<br/>
 
